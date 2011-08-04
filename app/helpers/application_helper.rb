@@ -1,2 +1,14 @@
 module ApplicationHelper
-end
+
+   def title
+      
+          base_title = "Aplicação Sample"
+         if @title.nil?
+              base_title
+         else
+             "#{base_title} | #{@title}"
+          end
+ 
+   end
+ 
+ end
