@@ -1,8 +1,10 @@
 require 'spec_helper'
 
 describe UsersController do
+render_views
 
   describe "GET 'new'" do
+    
     it "should be successful" do
       get 'new'
       response.should be_success
@@ -10,8 +12,9 @@ describe UsersController do
 
     it "should have de rigth title" do
     get 'new'
-    response.should have_selector("title", :content => "Sign up")
+    response.should have_selector("title", :content => "Signup")
     end
+  
   end
 
 end
