@@ -1,12 +1,14 @@
 Sample::Application.routes.draw do
-  get "users/new"
 
- # get "pages/home"
+  #adiciona as rotas do RESTful. São rotas padrões de um CRUD  
+  resources :users
+
+# get "pages/home"
 
  # get "pages/about"
 
 #  get "pages/help"
-  match 'signup', :to => 'users#new' 
+  match '/signup', :to => 'users#new' 
   match 'contact', :to => 'pages#contact'
   match 'about', :to => 'pages#about'
   match 'help', :to => 'pages#help'
